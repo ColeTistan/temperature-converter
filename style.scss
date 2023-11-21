@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Sans&display=swap');
+
+$white: #ffffff;
+$light: #d6d6d6;
+$lighter-blue: #e5eeff;
+$light-blue: #7591b9;
+
+@mixin d-flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Color Emoji', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    @include d-flex-center();
+    background: $lighter-blue;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    container-type: inline-size;
+}
+
+header {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.5rem;
+    letter-spacing: 1px;
+}
+
+span {
+    font-size: 2rem;
+}
+
+.card {
+    background: $white;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 17rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    .input-group {
+        @include d-flex-center();
+        flex-direction: column;
+        margin: 1.5rem;
+
+        label {
+            display: inline-block;
+            text-align: center;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            line-height: 2.5rem;
+        }
+
+        input {
+            font-size: 1.1rem;
+            width: 14rem;
+            padding: 8px;
+            outline: none;
+            border: 2px solid $light;
+            border-radius: 0.5rem;
+            transition: 0.2s ease-in-out;
+
+            &:focus {
+                border: 2px solid $light-blue;
+            }
+        }
+    }
+}
+
+@container (min-width: 350px) {
+    .card {
+        width: 18rem;
+        margin: 0 auto;
+    }
+
+    header {
+        font-size: 1.1rem;
+    }
+}
