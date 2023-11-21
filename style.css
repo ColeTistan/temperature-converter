@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #e5eeff;
+  background: #f7f7f7;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
@@ -28,6 +28,18 @@ header {
 
 span {
   font-size: 2rem;
+}
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  border-top: 2px solid #ffffff;
+  width: 100%;
+  padding: 1.25rem;
+  letter-spacing: 1px;
+  color: #ffffff;
+  background: #2d2b2b;
 }
 
 .card {
@@ -56,7 +68,7 @@ span {
   width: 14rem;
   padding: 8px;
   outline: none;
-  border: 2px solid #d6d6d6;
+  border: 2px solid #f7f7f7;
   border-radius: 0.5rem;
   transition: 0.2s ease-in-out;
 }
@@ -71,5 +83,8 @@ span {
   }
   header {
     font-size: 1.1rem;
+  }
+  footer {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

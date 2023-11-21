@@ -56,6 +56,7 @@ inputs.forEach((input) => {
             if (!isNaN(temperatureValue)) {
                 fahrenheitInput.value = convertKelvinToFahrenheit(temperatureValue);
                 celsiusInput.value = convertKelvinToCelsius(temperatureValue);
+            } else {
                 fahrenheitInput.value = "";
                 celsiusInput.value = "";
             }
